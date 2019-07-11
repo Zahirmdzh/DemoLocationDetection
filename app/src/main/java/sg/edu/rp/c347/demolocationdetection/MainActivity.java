@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
         btnGetLastLoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,6 +129,14 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             });
+
+        btnRemoveLocUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                client.removeLocationUpdates(mLocationCallback);
+            }
+        });
+
         }
 
     private boolean checkPermission(){
